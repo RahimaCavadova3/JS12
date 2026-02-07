@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="src/output.css" rel="stylesheet" />
+  <title>Property</title>
+</head>
+<body>
+    <header class="bg-[url('https://themewagon.github.io/property/images/hero_bg_2.jpg')] bg-center bg-cover h-screen py-5 px-3">
+        <!--Mobil header-->
+        <div class="container lg:hidden flex flex-row justify-between items-center bg-[#005555] mx-auto p-6 rounded-[8px]">
+            <h3 class="hover:text-white text-[#ffffff80] flex text-2xl duration-500 cursor-pointer">Property</h3>
+            <a onclick="menuOpen()" class="fa-solid fa-bars text-white text-2xl"></a>
+        </div>
+        <div id="menubar" style="right: -100%" class="z-10 bg-white fixed top-0 h-[100vh] w-[80%] duration-600">
+            <span onclick="menuOpen()" class="flex justify-end items-center px-3 text-4xl text-black cursor-pointer">x</span>
+            <ul class="flex flex-col items-center justify-center gap-5 py-5">
+                <li><a class="text-[#00204a] text-[15px]" href="">Home</a></li>
+                <li><a class="text-[#00204a] text-[15px]" href="">Properties</a></li>
+                <li><a class="text-[#00204a] text-[15px]" href="">Services</a></li>
+                <li><a class="text-[#00204a] text-[15px]" href="">About</a></li>
+                <li><a class="text-[#00204a] text-[15px]" href="">Contact Us</a></li>
+            </ul>
+        </div>
+        <!--Desktop header-->
+        <div class="container hidden lg:flex flex-row justify-between items-center bg-[#005555] mx-auto p-6 rounded-[8px]">
+            <h3 class="text-[#ffffff80] hover:text-white text-2xl duration-500 cursor-pointer">Property</h3>
+            <ul class="flex flex-row items-center gap-5">
+                <li><a class="text-[15px] text-white" href="">Home</a></li>
+                <li><a class="text-[15px] text-[#ffffff80] hover:text-white duration-500" href="">Properties</a></li>
+                <li><a class="text-[15px] text-[#ffffff80] hover:text-white duration-500" href="">Services</a></li>
+                <li><a class="text-[15px] text-[#ffffff80] hover:text-white duration-500" href="">About</a></li>
+                <li><a class="text-[15px] text-[#ffffff80] hover:text-white duration-500" href="">Contact Us</a></li>
+            </ul>
+        </div>
+        
+        <div class="flex flex-col justify-center items-center pt-50 text-center">
+            <h3 class="text-2xl lg:text-4xl text-white font-bold">Easiest way to find your dream home</h3>
+            <div class="flex flex-row p-10 gap-3">
+                <input class="border-0 outline-0 p-3 rounded-4xl w-full lg:w-96 bg-white" type="text" placeholder="Your ZIP code or City. e.g. New York"/>
+                <button class="border-0 p-3 rounded-4xl w-24 bg-[#005555] text-white transform hover:-translate-y-0.5 duration-300">Search</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!--Popular Properties 1-->
+        <div class="container flex flex-col gap-3 lg:flex-row justify-between lg:items-center p-6 mx-auto my-10">
+            <h3 class=" text-3xl lg:text-4xl text-[#00204a] font-bold">Popular Properties</h3>
+            <button class="border-0 p-4 rounded-4xl w-[60%] sm:w-48 md:w-48 lg:w-48 bg-[#005555] text-white transform hover:-translate-y-0.5 duration-300">View all properties</button>
+        </div>
+        <div class="container flex flex-col lg:flex-row justify-center items-center mx-auto gap-8 px-5">
+            <div class="border-0 shadow-xl w-full lg:w-[33.33%]">
+                <img class="object-cover w-full h-[300px]" src="https://themewagon.github.io/property/images/img_1.jpg" alt="" />
+                <div class="flex flex-col gap-3 p-6">
+                    <h6 class="text-[#005555] text-xl font-bold">$1,291,000</h6>
+                    <hr class="w-[104px]"/> 
+                    <p class="text-[#7f7f7f] text-[14px]">5232 California Fake, Ave. 21BC</p>
+                    <h6 class="text-xl font-bold text-black">California, USA</h6>
+                    <div class="flex flex-row gap-3">
+                        <p class="text-[#7f7f7f] text-[14px]"><i class="fa-solid fa-bed text-[15px]"></i> 2 beds</p>
+                        <p class="text-[#7f7f7f] text-[14px]"><i class="fa-solid fa-bath text-[15px]"></i> 2 baths</p>
+                    </div>
+                    <a class="border-0 p-2 w-28 rounded-4xl text-center bg-[#005555] text-white transition hover:-translate-y-0.5 duration-300 cursor-pointer">See details</a>
+                </div>
+            </div>
+            <div class="border-0 shadow-xl w-full lg:w-[33.33%]">
+                <img class="object-cover w-full h-[300px]" src="https://themewagon.github.io/property/images/img_2.jpg" alt="" />
+                <div class="flex flex-col gap-3 p-6">
+                    <h6 class="text-[#005555] text-xl font-bold">$1,291,000</h6>
+                    <hr class="w-[104px]"/> 
+                    <p class="text-[#7f7f7f] text-[14px]">5232 California Fake, Ave. 21BC</p>
+                    <h6 class="text-xl font-bold text-black">California, USA</h6>
+                    <div class="flex flex-row gap-3">
+                        <p class="text-[#7f7f7f] text-[14px]"><i class="fa-solid fa-bed text-[15px]"></i> 2 beds</p>
+                        <p class="text-[#7f7f7f] text-[14px]"><i class="fa-solid fa-bath text-[15px]"></i> 2 baths</p>
+                    </div>
+                    <a class="border-0 p-2 w-28 rounded-4xl text-center bg-[#005555] text-white transition hover:-translate-y-0.5 duration-300 cursor-pointer">See details</a>
+                </div>
+            </div>
+            <div class="border-0 shadow-xl w-full lg:w-[33.33%]">
+                <img class="object-cover w-full h-[300px]" src="https://themewagon.github.io/property/images/img_3.jpg" alt="" />
+                <div class="flex flex-col gap-3 p-6">
+                    <h6 class="text-[#005555] text-xl font-bold">$1,291,000</h6>
+                    <hr class="w-[104px]"/> 
+                    <p class="text-[#7f7f7f] text-[14px]">5232 California Fake, Ave. 21BC</p>
+                    <h6 class="text-xl font-bold text-black">California, USA</h6>
+                    <div class="flex flex-row gap-3">
+                        <p class="text-[#7f7f7f] text-[14px]"><i class="fa-solid fa-bed text-[15px]"></i> 2 beds</p>
+                        <p class="text-[#7f7f7f] text-[14px]"><i class="fa-solid fa-bath text-[15px]"></i> 2 baths</p>
+                    </div>
+                    <a class="border-0 p-2 w-28 rounded-4xl text-center bg-[#005555] text-white transition hover:-translate-y-0.5 duration-300 cursor-pointer">See details</a>
+                </div>
+            </div>
+        </div>
+        <!--Popular Properties 2-->
+        <div class="bg-[#f2f4f6]">
+            <div class=" container grid grid-cols-2 lg:grid-cols-4 gap-5 mx-auto mt-30 mb-20 p-8">
+                <div data-aos="fade-up" data-aos-duration="1000" class="border-0 bg-white flex flex-col gap-3 items-center justify-center text-center px-10 py-12">
+                    <a class="fa-solid fa-house text-4xl text-[#00204a]"></a>
+                    <p class="text-[#00204a] text-[18px]">Our Properties</p>
+                    <p class="text-[#7f7f7f] text-[14px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.</p>
+                    <a class="text-[#001a3b] text-[16px] cursor-pointer">Learn More</a>
+                    <hr class="border-2 text-[#005555] w-20"/>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="border-0 bg-white flex flex-col gap-3 items-center justify-center text-center px-10 py-12">
+                    <a class="fa-solid fa-building text-4xl text-[#00204a]"></a>
+                    <p class="text-[#00204a] text-[18px]">Property for Sale</p>
+                    <p class="text-[#7f7f7f] text-[14px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.</p>
+                    <a class="text-[#001a3b] text-[16px] cursor-pointer">Learn More</a>
+                    <hr class="border-2 text-[#005555] w-20"/>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="border-0 bg-white  flex flex-col gap-3 items-center justify-center text-center px-10 py-12">
+                    <a class="fa-solid fa-building-user text-4xl text-[#00204a]"></a>
+                    <p class="text-[#00204a] text-[18px]">Real Estate Agent</p>
+                    <p class="text-[#7f7f7f] text-[14px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.</p>
+                    <a class="text-[#001a3b] text-[16px] cursor-pointer">Learn More</a>
+                    <hr class="border-2 text-[#005555] w-20"/>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="border-0 bg-white flex flex-col gap-3 items-center justify-center text-center px-10 py-12">
+                    <a class="fa-solid fa-gopuram text-4xl text-[#00204a]"></a>
+                    <p class="text-[#00204a] text-[18px]">House for Sale</p>
+                    <p class="text-[#7f7f7f] text-[14px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus.</p>
+                    <a class="text-[#001a3b] text-[16px] cursor-pointer">Learn More</a>
+                    <hr class="border-2 text-[#005555] w-20"/>
+                </div>
+            </div>
+        </div>
+        <!--Customer Says-->
+        <h3 class="text-[#00204a] text-3xl text-left lg:text-center mb-[15px] px-5 font-bold">Customer Says</h3>
+        <div class="container flex flex-col lg:flex-row justify-center items-center mx-auto gap-6 px-5">
+            <div class="border-0 w-full lg:w-[33.33%] flex flex-col gap-2 p-3 justify-center">
+                <img class="w-24 h-24 rounded-[50%]" src="https://themewagon.github.io/property/images/person_1-min.jpg" alt="">
+                <div>
+                    <i class="fa-solid fa-star text-[#ffc107] text-[13px]"></i>
+                    <i class="fa-solid fa-star text-[#ffc107] text-[13px]"></i>
+                    <i class="fa-solid fa-star text-[#ffc107] text-[13px]"></i>
+                    <i class="fa-solid fa-star text-[#ffc107] text-[13px]"></i>
+                    <i class="fa-solid fa-star text-[#ffc107] text-[13px]"></i>
+                </div>
+                <h4 class="text-[#00204a] text-xl">James Smith</h4>
+                <p class="text-black text-[14px]">“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.”</p>
+                <p class="text-[#7f7f7f] text-[14px]">Designer, Co-founder</p>
+            </div>
+            <div class="border-0 w-full lg:w-[33.33%] flex flex-col gap-2 p-3 justify-center">
+                <img class="w-24 h-24 rounded-[50%]" src="https://themewagon.github.io/property/images/person_2-min.jpg" alt="">
+                <div>
+                    <i class="fa-solid fa-star text-[#ffc107] text-[13px]"></i>
+                    <i class="fa-solid fa-star text-[#ffc107] text-[13px]"></i>
+                    <i class="fa-solid fa-star text-[#ffc107] text-[13px]"></i>
+                    <i class="fa-solid fa-star text-[#ffc107] text-[13px]"></i>
+                    <i class="fa-solid fa-star text-[#ffc107] text-[13px]"></i>
+                </div>
+                <h4 class="text-[#00204a] text-xl">Mike Houston</h4>
+                <p class="text-black text-[14px]">“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.”</p>
+                <p class="text-[#7f7f7f] text-[14px]">Designer, Co-founder</p>
+            </div>
+            <div class="border-0 w-full lg:w-[33.33%] flex flex-col gap-2 p-3 justify-center">
+                <img class="w-24 h-24 rounded-[50%]" src="https://themewagon.github.io/property/images/person_3-min.jpg" alt="">
+                <div>
+                    <i class="fa-solid fa-star text-[#ffc107] text-[13px]"></i>
+                    <i class="fa-solid fa-star text-[#ffc107] text-[13px]"></i>
+                    <i class="fa-solid fa-star text-[#ffc107] text-[13px]"></i>
+                    <i class="fa-solid fa-star text-[#ffc107] text-[13px]"></i>
+                    <i class="fa-solid fa-star text-[#ffc107] text-[13px]"></i>
+                </div>
+                <h4 class="text-[#00204a] text-xl">Cameron Webster</h4>
+                <p class="text-black text-[14px]">“Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.”</p>
+                <p class="text-[#7f7f7f] text-[14px]">Designer, Co-founder</p>
+            </div>
+        </div>
+        <!--Let's find home that's perfect for you-->
+        <div class="bg-[#f8f9fa] mt-[40px]">
+            <div class="text-center mx-auto flex flex-col gap-3 py-15 lg:w-[30%] px-5">
+                <h2 class="text-3xl text-[#00204a] font-bold">Let's find home that's perfect for you</h2>
+                <p class="text-[#7c7c7d] text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam enim pariatur similique debitis vel nisi qui reprehenderit.</p>
+            </div>
+            <div class="container flex flex-col lg:flex-row justify-between items-center mx-auto gap-10">
+                <div class="w-full lg:w-[50%] flex flex-col gap-5 px-5">
+                    <div class="flex flex-row gap-5">
+                        <div class="border-0 w-20 h-20 rounded-[50%] flex items-center justify-center m-auto bg-[#efefef] hover:bg-white hover:border-[#00204a] hover:border-2 transition hover:scale-110 duration-500">
+                            <a class="fa-solid fa-house"></a>
+                        </div>
+                        <div>
+                            <h6 class="text-[#00204a] text-[18px]">2M Properties</h6>
+                            <p class="text-[#7c7c7d] lg:w-[70%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row gap-5">
+                        <div class="border-0 w-20 h-20 rounded-[50%] flex items-center justify-center m-auto bg-[#efefef] hover:bg-white hover:border-[#00204a] hover:border-2 transition hover:scale-110 duration-500">
+                            <a class="fa-solid fa-user"></a>
+                        </div>
+                        <div>
+                            <h6 class="text-[#00204a] text-[18px]">Top Rated Agents</h6>
+                            <p class="text-[#7c7c7d] lg:w-[70%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row gap-5">
+                        <div class="border-0 w-20 h-20 rounded-[50%] flex items-center justify-center m-auto bg-[#efefef] hover:bg-white hover:border-[#00204a] hover:border-2 transition hover:scale-110 duration-500">
+                            <a class="fa-solid fa-shield-halved"></a>
+                        </div>
+                        <div>
+                            <h6 class="text-[#00204a] text-[18px]">Legit Properties</h6>
+                            <p class="text-[#7c7c7d] lg:w-[70%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-[50%] px-5 -order-1 lg:order-1">
+                    <img src="https://themewagon.github.io/property/images/hero_bg_3.jpg" alt="">
+                </div>
+            </div>
+            <div class="container grid lg:grid-cols-4 grid-cols-2 mx-auto px-5 py-20 gap-10">
+                <div data-aos="fade-up" data-aos-duration="1000" class="flex flex-col gap-2">
+                    <h3 class="text-[#00204a] text-4xl font-bold">3,298</h3>
+                    <p class="text-[#7c7c7d] text-[14px]"># of Buy Properties</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="flex flex-col gap-2">
+                    <h3 class="text-[#00204a] text-4xl font-bold">2,181</h3>
+                    <p class="text-[#7c7c7d] text-[14px]"># of Sell Properties</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="flex flex-col gap-2">
+                    <h3 class="text-[#00204a] text-4xl font-bold">9,316</h3>
+                    <p class="text-[#7c7c7d] text-[14px]"># of All Properties</p>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" class="flex flex-col gap-2">
+                    <h3 class="text-[#00204a] text-4xl font-bold">7,191</h3>
+                    <p class="text-[#7c7c7d] text-[14px]"># of Agents</p>
+                </div>
+            </div>
+        </div>
+        <!--Be a part of our growing real state agents-->
+        <div data-aos="fade-up" data-aos-duration="1000" class="mx-auto flex flex-col gap-3 justify-center items-center text-center px-5 py-15">
+            <h2 class="text-3xl text-[#00204a] font-bold">Be a part of our growing real state agents</h2>
+            <button class="border-0 p-3 rounded-4xl w-60 bg-[#005555] text-white transform hover:-translate-y-0.5 duration-300">Apply for Real Estate agent</button>
+        </div>
+        <!--Our Agents-->
+        <div class="bg-[#f8f9fa]">
+            <div class=" flex flex-col items-center text-center mx-auto gap-5 py-20 px-5">
+                <h3 class="text-3xl text-[#00204a] font-bold">Our Agents</h3>
+                <p class="text-[#7c7c7d] lg:w-[45%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam enim pariatur similique debitis vel nisi qui reprehenderit totam? Quod maiores.</p>
+            </div>
+            <div class="container flex flex-col lg:flex-row mx-auto justify-center items-center pb-15 px-5 gap-6">
+                <div class="border-0 lg:w-[33.33%] bg-white flex flex-col items-center gap-2 p-5">
+                    <img class="w-20 h-20 rounded-[50%]" src="https://themewagon.github.io/property/images/person_1-min.jpg" alt="">
+                    <div class="flex flex-col items-center">
+                        <h6 class="text-[18px]">James Doe</h6>
+                        <p class="text-[#a7a7a7]">Real Estate Agent</p>
+                    </div>
+                    <p class="text-[#a7a7a7] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam, minus culpa doloremque odio, neque molestias?</p>
+                    <div class="flex flex-row flex-wrap gap-3">
+                        <span class="border-0 hover:border-2 hover:border-[#00204a] p-2 rounded-[50%] bg-[#00204a] hover:text-[#00204a] text-white inline-block transition hover:-translate-y-1 hover:bg-white duration-200"><a class="fa-brands fa-twitter"></a></span>
+                        <span class="border-0 hover:border-2 hover:border-[#00204a] p-2 rounded-[50%] bg-[#00204a] hover:text-[#00204a] text-white inline-block transition hover:-translate-y-1 hover:bg-white duration-200"><a class="fa-brands fa-facebook-f"></a></span>
+                        <span class="border-0 hover:border-2 hover:border-[#00204a] p-2 rounded-[50%] bg-[#00204a] hover:text-[#00204a] text-white inline-block transition hover:-translate-y-1 hover:bg-white duration-200"><a class="fa-brands fa-linkedin-in"></a></span>
+                        <span class="border-0 hover:border-2 hover:border-[#00204a] p-2 rounded-[50%] bg-[#00204a] hover:text-[#00204a] text-white inline-block transition hover:-translate-y-1 hover:bg-white duration-200"><a class="fa-brands fa-instagram"></a></span>
+                    </div>
+                </div>
+                <div class="border-0 lg:w-[33.33%] bg-white flex flex-col items-center gap-2 p-5">
+                    <img class="w-20 h-20 rounded-[50%]" src="https://themewagon.github.io/property/images/person_2-min.jpg" alt="">
+                    <div class="flex flex-col items-center">
+                        <h6 class="text-[18px]">Jean Smith</h6>
+                        <p class="text-[#a7a7a7]">Real Estate Agent</p>
+                    </div>
+                    <p class="text-[#a7a7a7] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam, minus culpa doloremque odio, neque molestias?</p>
+                    <div class="flex flex-row flex-wrap gap-3">
+                        <span class="border-0 hover:border-2 hover:border-[#00204a] p-2 rounded-[50%] bg-[#00204a] hover:text-[#00204a] text-white inline-block transition hover:-translate-y-1 hover:bg-white duration-200"><a class="fa-brands fa-twitter"></a></span>
+                        <span class="border-0 hover:border-2 hover:border-[#00204a] p-2 rounded-[50%] bg-[#00204a] hover:text-[#00204a] text-white inline-block transition hover:-translate-y-1 hover:bg-white duration-200"><a class="fa-brands fa-facebook-f"></a></span>
+                        <span class="border-0 hover:border-2 hover:border-[#00204a] p-2 rounded-[50%] bg-[#00204a] hover:text-[#00204a] text-white inline-block transition hover:-translate-y-1 hover:bg-white duration-200"><a class="fa-brands fa-linkedin-in"></a></span>
+                        <span class="border-0 hover:border-2 hover:border-[#00204a] p-2 rounded-[50%] bg-[#00204a] hover:text-[#00204a] text-white inline-block transition hover:-translate-y-1 hover:bg-white duration-200"><a class="fa-brands fa-instagram"></a></span>
+                    </div>
+                </div>
+                <div class="border-0 lg:w-[33.33%] bg-white flex flex-col items-center gap-2 p-5">
+                    <img class="w-20 h-20 rounded-[50%]" src="https://themewagon.github.io/property/images/person_3-min.jpg" alt="">
+                    <div class="flex flex-col items-center">
+                        <h6 class="text-[18px]">Alicia Huston</h6>
+                        <p class="text-[#a7a7a7]">Real Estate Agent</p>
+                    </div>
+                    <p class="text-[#a7a7a7] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam, minus culpa doloremque odio, neque molestias?</p>
+                    <div class="flex flex-row flex-wrap gap-3">
+                        <span class="border-0 hover:border-2 hover:border-[#00204a] p-2 rounded-[50%] bg-[#00204a] hover:text-[#00204a] text-white inline-block transition hover:-translate-y-1 hover:bg-white duration-200"><a class="fa-brands fa-twitter"></a></span>
+                        <span class="border-0 hover:border-2 hover:border-[#00204a] p-2 rounded-[50%] bg-[#00204a] hover:text-[#00204a] text-white inline-block transition hover:-translate-y-1 hover:bg-white duration-200"><a class="fa-brands fa-facebook-f"></a></span>
+                        <span class="border-0 hover:border-2 hover:border-[#00204a] p-2 rounded-[50%] bg-[#00204a] hover:text-[#00204a] text-white inline-block transition hover:-translate-y-1 hover:bg-white duration-200"><a class="fa-brands fa-linkedin-in"></a></span>
+                        <span class="border-0 hover:border-2 hover:border-[#00204a] p-2 rounded-[50%] bg-[#00204a] hover:text-[#00204a] text-white inline-block transition hover:-translate-y-1 hover:bg-white duration-200"><a class="fa-brands fa-instagram"></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="bg-[#efefef] py-15">
+            <div class="container flex flex-col lg:flex-row justify-center mx-auto py-15 px-5 gap-8">
+                <div class="flex flex-col gap-3 lg:w-[33.33%]">
+                    <h6 class="text-[#00204a] text-[15px] font-bold">Contact</h6>
+                    <ul class="flex flex-col gap-2">
+                        <li><a class="text-[15px] text-[#888888]" href="">43 Raymouth Rd. Baltemoer, London 3910</a></li>
+                        <li><a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">+1(123)-456-7890</a></li>
+                        <li><a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">+1(123)-456-7890</a></li>
+                        <li><a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">info@mydomain.com</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-row lg:w-[33.33%] gap-10">
+                    <div class="flex flex-col gap-3">
+                        <h6 class="text-[#00204a] text-[15px] font-bold">Sources</h6>
+                        <ul class="flex flex-col gap-2">
+                            <li class="flex flex-col gap-3">
+                                <a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">About us</a>
+                                <a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">Services</a>
+                                <a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">Vision</a>
+                                <a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">Mission</a>
+                                <a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">Terms</a>
+                                <a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="flex flex-col gap-2">
+                        <li><a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">Partners</a></li>
+                        <li><a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">Business</a></li>
+                        <li><a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">Careers</a></li>
+                        <li><a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">Blog</a></li>
+                        <li><a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">FAQ</a></li>
+                        <li><a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">Creative</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-3 lg:w-[33.33%]">
+                    <h6 class="text-[#00204a] text-[15px] font-bold">Links</h6>
+                    <ul class="flex flex-col gap-2">
+                        <li><a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">Our Vision</a></li>
+                        <li><a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">About us</a></li>
+                        <li><a class="text-[15px] text-[#888888] underline hover:text-black duration-200" href="">Contact us</a></li>
+                    </ul>
+                    <div class="flex flex-row gap-2 flex-wrap">
+                        <span class="border-0 p-2 rounded-[40%] bg-[#ccc] text-[#777] inline-block transition hover:-translate-y-1.5 hover:bg-[#00204a] hover:text-white duration-200"><a class="fa-brands fa-instagram"></a></span>
+                        <span class="border-0 p-2 rounded-[40%] bg-[#ccc] text-[#777] inline-block transition hover:-translate-y-1.5 hover:bg-[#00204a] hover:text-white duration-200"><a class="fa-brands fa-twitter"></a></span>
+                        <span class="border-0 p-2 rounded-[40%] bg-[#ccc] text-[#777] inline-block transition hover:-translate-y-1.5 hover:bg-[#00204a] hover:text-white duration-200"><a class="fa-brands fa-facebook-f"></a></span>
+                        <span class="border-0 p-2 rounded-[40%] bg-[#ccc] text-[#777] inline-block transition hover:-translate-y-1.5 hover:bg-[#00204a] hover:text-white duration-200"><a class="fa-brands fa-linkedin-in"></a></span>
+                        <span class="border-0 p-2 rounded-[40%] bg-[#ccc] text-[#777] inline-block transition hover:-translate-y-1.5 hover:bg-[#00204a] hover:text-white duration-200"><a class="fa-brands fa-pinterest"></a></span>
+                        <span class="border-0 p-2 rounded-[40%] bg-[#ccc] text-[#777] inline-block transition hover:-translate-y-1.5 hover:bg-[#00204a] hover:text-white duration-200"><a class="fa-brands fa-dribbble"></a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center flex flex-col gap-3 px-5">
+                <p class="text-[#8c8c8c] text-[15px]">Copyright © 2026 . All Rights Reserved. — Designed with love by <a class="underline cursor-pointer hover:text-black duration-200">Untree.co</a></p>
+                <p class="text-[#8c8c8c] text-[15px]">Distributed by <a class="underline cursor-pointer hover:text-black duration-200">themewagon</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/App.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+</body>
+</html>
