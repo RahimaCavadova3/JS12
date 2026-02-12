@@ -7,3 +7,4 @@ function menuOpen() {
     menubar.style.right = "-100%";
   }
 }
+

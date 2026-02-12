@@ -175,8 +175,14 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
   .fixed {
     position: fixed;
+  }
+  .relative {
+    position: relative;
   }
   .top-0 {
     top: calc(var(--spacing) * 0);
@@ -241,12 +247,6 @@
   .table {
     display: table;
   }
-  .h-10 {
-    height: calc(var(--spacing) * 10);
-  }
-  .h-15 {
-    height: calc(var(--spacing) * 15);
-  }
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
@@ -262,12 +262,6 @@
   .h-screen {
     height: 100vh;
   }
-  .w-10 {
-    width: calc(var(--spacing) * 10);
-  }
-  .w-15 {
-    width: calc(var(--spacing) * 15);
-  }
   .w-20 {
     width: calc(var(--spacing) * 20);
   }
@@ -280,9 +274,6 @@
   .w-60 {
     width: calc(var(--spacing) * 60);
   }
-  .w-100 {
-    width: calc(var(--spacing) * 100);
-  }
   .w-\[60\%\] {
     width: 60%;
   }
@@ -294,6 +285,12 @@
   }
   .w-full {
     width: 100%;
+  }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
+  .shrink-0 {
+    flex-shrink: 0;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -393,6 +390,9 @@
   }
   .bg-\[\#f8f9fa\] {
     background-color: #f8f9fa;
+  }
+  .bg-\[rgba\(0\,0\,0\,0\.4\)\] {
+    background-color: rgba(0,0,0,0.4);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -604,6 +604,14 @@
       }
     }
   }
+  .hover\:border-1 {
+    &:hover {
+      @media (hover: hover) {
+        border-style: var(--tw-border-style);
+        border-width: 1px;
+      }
+    }
+  }
   .hover\:border-2 {
     &:hover {
       @media (hover: hover) {
@@ -651,6 +659,14 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-white);
+      }
+    }
+  }
+  .hover\:ring-2 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
       }
     }
   }
@@ -702,16 +718,6 @@
   .lg\:w-\[45\%\] {
     @media (width >= 64rem) {
       width: 45%;
-    }
-  }
-  .lg\:w-\[50\%\] {
-    @media (width >= 64rem) {
-      width: 50%;
-    }
-  }
-  .lg\:w-\[70\%\] {
-    @media (width >= 64rem) {
-      width: 70%;
     }
   }
   .lg\:w-\[80\%\] {
